@@ -1,0 +1,98 @@
+{%extends 'base_detail.html' %}
+{% load static %}
+{%block style%}
+<style>
+    #header-section {
+        background: url({% static 'assets/images/img/villes/' %}{{ ville.image1}} ) no-repeat center top;
+        background-size: cover;
+    }
+
+</style>
+
+{% endblock %}
+
+
+
+{%block content %}
+<!-- HEADER SECTION -->
+<div id="header-section">
+    <div class="container">
+        <div class="row centered">
+            <div class="col-md-8 col-md-offset-2">
+                <h1><strong>{{ ville.ville_name }}</strong>
+                </h1>
+                <br /> <br /> <br />
+                <a href="#products-section"> <i class="fa fa-angle-double-down fa-5x down-icon"></i> </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END HEADER SECTION -->
+
+
+<!--WORK/destination SECTION -->
+<div>
+    <div class="container">
+        <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
+            <div class="col-md-8 col-md-offset-2 ">
+
+                <h1>ville "{{ ville.ville_name}}"</h1>
+
+                <h4>
+                    {{ ville.ville_name}} est un lieu accueillant situé dans la
+                    charmante region de {{ ville.region }}, au cœur de la province de Darra Tafilalt.
+                </h4>
+            </div>
+        </div>
+        <!-- ./ Main Heading-->
+        <hr />
+        <div id="information" class="row main-low-margin">
+            <div class="col-md-12  col-md-offset-1 ">
+                <div class="col-md-6 col-sm-4 padtop" data-scrollreveal="enter left and move 100px, wait 0.8s">
+                    <img class="taget_image_with_more_dis"
+                        src="{% static 'assets/images/img/villes/' %}{{ ville.image1 }}" alt="">
+                    <img class="taget_image_with_more_dis"
+                        src="{% static 'assets/images/img/villes/' %}{{ ville.image2 }}" alt="">
+                </div>
+                <div class="col-md-6 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+                    <h4>  <strong class="color-red">Information sur {{ ville.ville_name}}</strong> </h4>
+                    <div>
+                        <p style="font-size: 22px ; line-height: 40px;">{{ ville.description|truncatewords:112 }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- ./ Row Content-->
+        <hr />
+        <div id="localisation" class="row main-low-margin bottam-pad"> <br><br><br>
+
+            <div class="col-md-10  col-md-offset-1 ">
+                <div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">
+                    <h4> <strong class="color-red">Position de "{{ ville.ville_name }}" </strong></h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490268.584332149!2d-6.487245399999992!3d31.318517368662775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdbce947e40d4963%3A0x6ec2d5ca91a798f4!2sDr%C3%A2a-Tafilalet!5e0!3m2!1sen!2sma!4v1687248919473!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <p>
+                        <i class="fa fa-check"></i> Geographic Information<br />
+                        <i class="fa fa-check"></i> latitude : {{ ville.latitude }}  <br />
+                        <i class="fa fa-check"></i> longitude : {{ ville.longitude }}  <br />
+                    </p>
+                    <a href="https://www.google.com/maps/place/{{ ville.ville_name }}/" class="btn btn-danger"> map info</a>
+                </div>
+                <div class="col-md-4 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+
+                    <img class="img-margin-product" src="{% static 'assets/images/img/villes/' %}{{ ville.image3 }}"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <!-- ./ Row Content-->
+    </div>
+</div>
+<!--END WORK/destination SECTION -->
+{%endblock%}
+
+
+{%block scripts%}
+
+{%endblock%}

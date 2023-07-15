@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selected Destinations</title>
+</head>
+<body>
+    <h1>Selected Destinations</h1>
+    <ul>
+        {% for destination in selected_destinations %}
+            <li>{{ destination.nom_dest }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html> 
+

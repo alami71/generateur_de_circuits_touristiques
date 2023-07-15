@@ -1,0 +1,80 @@
+[
+    {
+        "id_dest": 3,
+        "nom_dest": "Les Gorges du Dad\u00e8s",
+        "ville_dest": "Boumalne-Dad\u00e8s",
+        "province": "Tinghir",
+        "image_dest1": "322513-gorges-du-dades-architecture-berbe-re-dans.jpg",
+        "image_dest2": "les-gorges-du-dades.jpg",
+        "image_dest3": "Tinghir-Web-51.jpg",
+        "description_dest": "<p><span style=\"font-size: 14pt;\">Situ&eacute;es entre Boumalne-Dad&egrave;s et M&rsquo;semrir, <strong>les gorges du Dad&egrave;s</strong> constituent un autre endroit mythique et haut en couleurs, &agrave; la fois en histoire et en d&eacute;nivel&eacute;. C&rsquo;est Oued Dad&egrave;s qui a form&eacute; ce site naturel d&rsquo;exception, en se frayant un chemin dans les contreforts du massif du Haut Atlas. Il abreuve aussi les nombreuses vall&eacute;es paradisiaques qui d&eacute;valent vers le sud et qui sont d&rsquo;un charme unique. Longs de 20Km et d&rsquo;une profondeur de 200 &agrave; 500m, les gorges du Dad&egrave;s procurent des panoramas &agrave; couper le souffle et des vues ininterrompues faites de belles formations rocheuses ocres et rouges, de d&eacute;nivel&eacute;s &eacute;tourdissants et de vall&eacute;es verdoyantes qu&rsquo;entretient une paysannerie laborieuse connue pour son accueil chaleureux et son hospitalit&eacute; l&eacute;gendaire.</span></p>",
+        "latitude": 31.5744,
+        "longitude": -5.8794,
+        "categorie": "endroit_naturel"
+    },
+    {
+        "id_dest": 5,
+        "nom_dest": "Les Gorges du Todgha",
+        "ville_dest": "Tinghir",
+        "province": "Tinghir",
+        "image_dest1": "gorge-le-todra-8268136.jpg",
+        "image_dest2": "1564845809-JhNw9leo7lNXQiH.jpeg",
+        "image_dest3": "arton41819.jpg",
+        "description_dest": "<p><span style=\"font-size: 14pt;\"><strong>L&rsquo;oasis de Tinghir </strong>s'&eacute;tend sur une cinquantaine de kilom&egrave;tres de longueur, dont la partie la plus impressionnante constitue les Gorges du Todgha, taill&eacute;es dans la roche par la rivi&egrave;re du m&ecirc;me nom, donnant lieu &agrave; des falaises de calcaire hautes de 300 m&egrave;tres. Les splendides canyons impressionnent par leurs &agrave;-pics spectaculaires qui plongent jusqu&rsquo;au lit de la rivi&egrave;re, se voulant &ecirc;tre le paradis des grimpeurs et randonneurs. </span></p>\r\n<p><span style=\"font-size: 14pt;\">Les Gorges du Todgha occupent une place primordiale dans la vall&eacute;e, d&rsquo;une part en prot&eacute;geant le cours de la rivi&egrave;re qui irrigue les champs et les palmeraies paradisiaques, mais aussi de par leur fonction symbolique et identitaire pour la population de la r&eacute;gion depuis la nuit des temps.</span></p>",
+        "latitude": 31.59,
+        "longitude": -5.7019,
+        "categorie": "endroit_naturel"
+    },
+    {
+        "id_dest": 15,
+        "nom_dest": "Les Dunes de Chgaga",
+        "ville_dest": "Zagoura",
+        "province": "Zagoura",
+        "image_dest1": "Zagora-Web-107-1024x684-1.jpg",
+        "image_dest2": "Zagora-Web-97-1024x681-1.jpg",
+        "image_dest3": "Zagora-Web-108-1024x684-1.jpg",
+        "description_dest": "<p><span style=\"font-size: 14pt;\">Le massif dunaire Erg Chgaga se situe &agrave; environ 50km &agrave; l&rsquo;ouest de M&rsquo;Hamid El Ghizlane. Etendu sur plus de 600m&sup2;, il se compose de champs de dunes dont certaines s&rsquo;&eacute;l&egrave;vent &agrave; 70m de hauteur. Commun&eacute;ment appel&eacute;e Dunes de Chgaga, l&rsquo;attraction touristique n&rsquo;est accessible que par 4X4, &agrave; dos de chameaux ou &agrave; pied. De ce fait, Erg Chgaga demeure moins fr&eacute;quent&eacute; que son homologue Erg Chebbi o&ugrave; se trouvent les dunes de Merzouga. Le cadre pr&eacute;serv&eacute; et peu peupl&eacute; permet de vivre une r&eacute;elle exp&eacute;rience de d&eacute;paysement, dans une des contr&eacute;es les plus sauvages de la R&eacute;gion. &Eacute;crin de beaut&eacute; brute : Le trajet de M&rsquo;Hamid El Ghizlane aux dunes de Chgaga est p&eacute;rilleux et difficilement n&eacute;gociable. Il offre tout de m&ecirc;me de belles images surtout pour les passagers. En arrivant sur place, on d&eacute;couvre un site splendide qui compense largement le p&eacute;riple de la travers&eacute;e. En journ&eacute;e, les dunes de Chgaga brillent au soleil telles un mirage et se dessinent &agrave; perte de vue. Du haut des plus majestueuses, le paysage &eacute;tendu sur 40 km &agrave; 360&deg; procure un panorama id&eacute;al pour prendre des clich&eacute;s impressionnants. Au milieu des dunes, le silence r&egrave;gne et le sable dessine des peintures abstraites o&ugrave; se combinent le dor&eacute; et bleu. La nuit arriv&eacute;e, le d&eacute;cor change. Le ciel s&rsquo;illumine avec une infinit&eacute; d&rsquo;&eacute;toiles, et fusionne avec l&rsquo;ombre des dunes pour cr&eacute;er une ambiance fabuleusement mystique. Place aux festivit&eacute;s, au feu de camp, et &agrave; un moment impossible &agrave; oublier. Le lever de soleil cl&ocirc;ture avec brio l&rsquo;aventure, et marque &agrave; jamais l&rsquo;esprit des visiteurs.</span></p>",
+        "latitude": 29.8792,
+        "longitude": -6.03,
+        "categorie": "endroit_naturel"
+    },
+    {
+        "id_dest": 26,
+        "nom_dest": "Lac Isli et Tistlit",
+        "ville_dest": "Imilchil",
+        "province": "Midelt",
+        "image_dest1": "Midelt-Web-16.jpg",
+        "image_dest2": "Midelt-Web-34.jpg",
+        "image_dest3": "Midelt-Web-10.jpg",
+        "description_dest": "<p><span style=\"font-size: 14pt;\">Isli et Tislit figurent parmi les plus sublimes lacs en Afrique du nord. V&eacute;ritables curiosit&eacute;s naturelles, les deux lacs culminent &agrave; plus de 2200m et offrent le cadre id&eacute;al pour profiter pleinement des merveilles cach&eacute;es d&rsquo;Imilchil. Les deux lacs doivent leurs noms au couple de la c&eacute;l&egrave;bre histoire d&rsquo;amour interdit, que comm&eacute;more le Moussem des Fian&ccedil;ailles d&rsquo;Imilchil. Paradis des randonneurs Le spot naturel se situe &agrave; 20km d&rsquo;Imilchil, et est accessible par route bitum&eacute;e. Du moins c&rsquo;est le cas pour Tislit, vu que Isli se trouve &agrave; 10km de piste rocailleuse de la route. De ce fait, les commodit&eacute;s se situent du c&ocirc;t&eacute; du petit lac de Tislit, qui s&rsquo;&eacute;tend quand m&ecirc;me sur 1,3km&sup2; avec une profondeur de 27m. Un camping se trouve au bord du lac, et permet de profiter pleinement du cadre et de pouvoir se rendre facilement sur les sites incontournables de la r&eacute;gion. Isli quant &agrave; lui s&rsquo;&eacute;tend sur 2.55Km&sup2; pour 95m de profondeur. Son eau claire se transforme en miroir g&eacute;ant refl&eacute;tant les sommets enneig&eacute;s avoisinants, produisant ainsi une luminosit&eacute; exceptionnelle. Des conditions id&eacute;ales pour prendre en photo des panoramas sauvages &agrave; couper le souffle. Le duo constitue une attraction naturelle propice au ressourcement et l&rsquo;exploration p&eacute;destre. Il h&eacute;berge aussi chaque ann&eacute;e l&rsquo;iconique Moussem des Fian&ccedil;ailles, qui comm&eacute;more l&rsquo;idylle l&eacute;gendaire de Isli et Tislit. La l&eacute;gende d&rsquo;un amour interdit C&rsquo;est l&rsquo;histoire d&rsquo;un amour n&eacute; entre Tislit de A&iuml;t Ya&acirc;za et Isli de A&iuml;t Brahim &agrave; proximit&eacute; d&rsquo;une source situ&eacute;e entre les deux fractions rivales. On raconte que leur amour &eacute;tait d&rsquo;une puret&eacute; absolue, et qu&rsquo;ils ne pouvaient plus vivre s&eacute;par&eacute;s. Pourtant les familles refus&egrave;rent cat&eacute;goriquement leur union. Tortur&eacute;s de chagrin, le Rom&eacute;o et Juliette Amazighs s&rsquo;enfuirent et gravirent une montagne pour pleurer leur d&eacute;ception. Le d&eacute;luge de larmes &eacute;tait si fort qu&rsquo;il donna naissance aux lacs Isli et Tislit. Les amoureux finirent par se noyer dans le fruit de leur chagrin. Leurs tribus, touch&eacute;es par cette trag&eacute;die, d&eacute;cid&egrave;rent qu&rsquo;une fois par an, leurs jeunes gar&ccedil;ons et jeunes filles se choisiraient et se marieraient librement.</span></p>",
+        "latitude": 31.2364,
+        "longitude": -6.9078,
+        "categorie": "endroit_naturel"
+    },
+    {
+        "id_dest": 31,
+        "nom_dest": "La Source Bleue de Meski",
+        "ville_dest": "Errachidia",
+        "province": "Errachidia",
+        "image_dest1": "Errachida-Web-90-Ain-Meski.jpg",
+        "image_dest2": "Errachida-Web-87.jpg",
+        "image_dest3": "Errachida-Web-89.jpg",
+        "description_dest": "<p><span style=\"font-size: 14pt;\">La Source Bleue de Meski se situe &agrave; 20km au sud-est d&rsquo;Errachidia, en direction d'Erfoud. R&eacute;surgence de l'Oued Ziz, elle s'&eacute;coule g&eacute;n&eacute;reusement pour former une piscine majestueuse, propice au rafra&icirc;chissement. Elle procure ainsi le cadre id&eacute;al pour passer un moment agr&eacute;able en famille, sous l&rsquo;ombre des palmiers et des rochers ocres. La source de Meski trouve naissance dans une cavit&eacute; rocheuse, ce qui donne &agrave; son eau cristalline une fra&icirc;cheur extraordinaire. Une denr&eacute;e rare dans une r&eacute;gion connue pour atteindre des temp&eacute;ratures records en &eacute;t&eacute;. De ce fait, la source a toujours &eacute;t&eacute; un lieu de baignade faisant le bonheur des grands comme des petits. Le bassin a &eacute;t&eacute; construit au d&eacute;but du XX&egrave;me si&egrave;cle, et a &eacute;volu&eacute; au fil des ann&eacute;es pour devenir aujourd&rsquo;hui une attraction touristique phare dans la r&eacute;gion. Celle-ci se compose d&rsquo;une grande piscine, de petits caf&eacute;s, de boutiques &agrave; souvenirs et d&rsquo;une aire de camping-cars. Le lieu est entour&eacute; de parois rocheuses, et jouit d&rsquo;une verdure exceptionnelle qui se compose essentiellement de grands palmiers. En empruntant l&rsquo;escalier qui m&egrave;ne au haut des parois, on peut admirer un panorama pittoresque fait de champs irrigu&eacute;s avec le d&eacute;sert comme toile de fond. De plus, les locaux pr&ecirc;tent &agrave; cette source des vertus curatives.&nbsp;</span></p>",
+        "latitude": 31.4397,
+        "longitude": -3.9897,
+        "categorie": "endroit_naturel"
+    },
+    {
+        "id_dest": 34,
+        "nom_dest": "Le Jbel Ayachi",
+        "ville_dest": "Midelt",
+        "province": "Errachidia",
+        "image_dest1": "20668474master.jpg",
+        "image_dest2": "Ayachi-Mountain-in-Eastern-High-Atlas-Mountains.jpg",
+        "image_dest3": "6f8ca90a617cdcae7c17a80dc146d0f0.jpg",
+        "description_dest": "<p><span style=\"font-size: 14pt;\">Le Jbel Ayachi Le Jbel Ayachi est entour&eacute; de collines et de vall&eacute;es et son couvert v&eacute;g&eacute;tal est fait de for&ecirc;ts de ch&ecirc;nes et de c&egrave;dre. La r&eacute;gion est bien arros&eacute;e et dispose ainsi de vastes p&acirc;turages, propices &agrave; l&rsquo;&eacute;levage ovin et caprin. Le pi&eacute;mont est donc le lieu id&eacute;al pour faire le plein d&rsquo;air frais, pour se rapprocher de la nature et surtout pour sentir un d&eacute;paysement total. </span></p>\r\n<p><span style=\"font-size: 14pt;\">Au c&oelig;ur des vall&eacute;es, c&rsquo;est le silence absolu. Les randonneurs n&rsquo;auront comme compagnie que la faune locale, compos&eacute;e principalement de petits mammif&egrave;res, de reptiles de rochers et d&rsquo;oiseaux. En prenant de l&rsquo;altitude, les d&eacute;cors verdoyants se m&ecirc;lent aux sommets calcaires, formant ainsi un panorama photog&eacute;nique. Une demi-journ&eacute;e suffit pour profiter pleinement des atouts naturels du site. Un g&eacute;ant &agrave; gravir L&rsquo;ascension du Jbel Ayachi figure parmi les plus difficiles au Maroc. Pour gravir le sommet, il est conseill&eacute; d&rsquo;&ecirc;tre un randonneur averti, d&rsquo;avoir des notions d&rsquo;escalade et surtout d&rsquo;&ecirc;tre accompagn&eacute; par un guide certifi&eacute;. Pour cause : les donn&eacute;es des pistes varient selon les conditions m&eacute;t&eacute;orologiques. L&rsquo;aventure commence &agrave; l&rsquo;aube, depuis le village Tattiouine ou celui de Sidi Hamza. Le trek dure 2 &agrave; 3 jours, durant lesquels les aventuriers arpentent des sentiers tumultueux et sauvages, passent par des cols difficiles et traversent m&ecirc;me parfois le fond de la rivi&egrave;re. Le d&eacute;nivel&eacute; total de l&rsquo;ascension d&eacute;passe les 2000m sur environ 25Km. Un grand c&ocirc;ne est &eacute;rig&eacute; au sommet pour marquer la r&eacute;ussite de l&rsquo;ascension. Le panorama de 360&deg; depuis le sommet est une r&eacute;compense inestimable. La vue s&rsquo;&eacute;tend &agrave; des kilom&egrave;tres sur les sublimes paysages du Haut Atlas oriental, et notamment sur le c&eacute;l&egrave;bre cirque de Jaafar, qu&rsquo;on peut visiter sur le chemin du retour.</span></p>",
+        "latitude": 32.5647,
+        "longitude": -5.2028,
+        "categorie": "endroit_naturel"
+    }
+]

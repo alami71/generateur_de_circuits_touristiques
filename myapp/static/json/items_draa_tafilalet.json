@@ -1,0 +1,77 @@
+[
+  {
+    "Id": "2",
+    "CategorieId": "1",
+    "Categorie": "Museum",
+    "NameFr": "Musée Sijilmassa",
+    "NameEn": "Sijilmassa Museum",
+    "Latitude": "31.918953",
+    "Longitude": "-4.445651",
+    "des": "dhfjjsd"
+  },
+  {
+    "Id": "3",
+    "CategorieId": "1",
+    "Categorie": "Museum",
+    "NameFr": "Musée Theatre Memoire",
+    "Latitude": "31.034518",
+    "Longitude": "-6.580855"
+  },
+  {
+    "Id": "4",
+    "CategorieId": "1",
+    "Categorie": "Museum",
+    "NameFr": "Musée des Oasis",
+    "NameEn": "Oasis Museum",
+    "NameAr": "متحف الواحة",
+    "AdressFr": "Asrir Oued Ferkla | 52002, Tinejdad 52600, Maroc",
+    "Latitude": "31.853383",
+    "Longitude": "-5.098874"
+  },
+  {
+    "Id": "5",
+    "CategorieId": "1",
+    "Categorie": "Museum",
+    "NameFr": "Musée du tapis",
+    "Latitude": "30.922669",
+    "Longitude": "-6.925654"
+  },
+  {
+    "Id": "6",
+    "CategorieId": "3",
+    "Categorie": "Fortress",
+    "NameFr": "Es-Sifa Glagla",
+    "Latitude": "31.346829",
+    "Longitude": "-4.333483"
+  },
+  {
+    "NameFr": "Midelt",
+    "Latitude": 32.6851,
+    "Longitude": -4.7436,
+    "description": "Ville située dans le Moyen Atlas"
+  },
+  {
+    "NameFr": "Rich",
+    "Latitude": 32.0633,
+    "Longitude": -5.5361,
+    "description": "Village fortifié berbère dans la région de Meknès"
+  },
+  {
+    "NameFr": "Errachidia",
+    "Latitude": 31.9333,
+    "Longitude": -4.4167,
+    "description": "Ville située dans la région de Draâ-Tafilalet"
+  },
+  {
+    "NameFr": "Erfoud",
+    "Latitude": 31.9403,
+    "Longitude": -4.4247,
+    "description": "Ville située dans le désert du Sahara"
+  },
+  {
+    "NameFr": "Merzouga",
+    "Latitude": 31.0997,
+    "Longitude": -4.0117,
+    "description": "Village touristique dans le désert du Sahara"
+  }
+]

@@ -1,0 +1,104 @@
+destinations = Destination.objects.all()[0:5]
+# Create a list to store the serialized fields
+serialized_data = []
+# Serialize the fields for each model object
+for destination in destinations:
+    serialized_fields = {
+        'nom_dest': destination.nom_dest,
+        'ville_dest': destination.ville_dest,
+        'province': destination.province,
+        'image_dest1': destination.image_dest1,
+        'image_dest2': destination.image_dest2,
+        'image_dest3': destination.image_dest3,
+        #'localisation_dest': destination.localisation_dest,
+        #'carte_dest': destination.carte_dest,
+        'description_dest': destination.description_dest,
+        #'date_modification': destination.date_modification,
+        'latitude': destination.latitude,
+        'longitude': destination.longitude,
+    }
+    serialized_data.append(serialized_fields)
+# Convert the serialized data to JSON
+json_data = json.dumps(serialized_data, indent=4)
+
+# Specify the file path for the JSON file
+file_path = os.path.join(
+    os.path.dirname(__file__), "static", "json", "circuit1.json"
+)
+# Save the serialized data into the JSON file
+with open(file_path, "w") as file:
+    file.write(json_data)
+
+
+
+
+
+
+
+
+
+    urls 
+    path('genere_ciruit/', views.genere_ciruit, name='genere_ciruit'),
+
+
+# this to retrive all modeles from my destination
+    					<!-- template.html 
+					{% for ville in ville_destinations %}
+					<h3>{{ ville.ville_dest }}</h3>
+					<ul>
+						{% with destinations=destinations[ville.ville_dest] %}
+						{% for destination in destinations %}
+						<li>
+							<h4>{{ destination.nom_dest }}</h4>
+							<p>Description: {{ destination.description_dest }}</p>
+							<p>Date Modified: {{ destination.date_modification }}</p>
+							<p>Latitude: {{ destination.latitude }}</p>
+							<p>Longitude: {{ destination.longitude }}</p>
+							<img src="{{ destination.image_dest1 }}" alt="Image 1">
+							<img src="{{ destination.image_dest2 }}" alt="Image 2">
+							<img src="{{ destination.image_dest3 }}" alt="Image 3">
+							<p>Location: {{ destination.localisation_dest }}</p>
+							<p>Map: {{ destination.carte_dest }}</p>
+						</li>
+						{% endfor %}
+						{% endwith %}
+					</ul>
+					{% endfor %}
+				    -->
+
+						<!-- Top place to visit -->
+	<section class="visit section-wrapper">
+		<div class="container">
+			<h2 class="section-title">
+				Top place to visit
+			</h2>
+			<p class="section-subtitle">
+				Lorem Ipsum is simply dummy text of the industry.
+			</p>
+
+			
+				<div class="item">
+					<img src="{% static 'assets/images/visit-1.png'%}" alt="visit-image"
+						class="img-responsive visit-item">
+					<h2>dfsjdjsh</h2>
+				</div>
+				<div class="item">
+					<img src="{% static 'assets/images/visit-2.png'%}" alt="visit-image"
+						class="img-responsive visit-item">
+				</div>
+				<div class="item">
+					<img src="{% static 'assets/images/target-1.jpg'%}" alt="visit-image"
+						class="img-responsive visit-item">
+				</div>
+				<div class="item">
+					<img src="{% static 'assets/images/target-1.jpg'%}" alt="visit-image"
+						class="img-responsive visit-item">
+				</div>
+				<div class="item">
+					<img src="{% static 'assets/images/target-1.jpg'%}" alt="visit-image"
+						class="img-responsive visit-item">
+				</div>
+				
+			
+		</div> <!-- /.container -->
+	</section> <!-- /.visit -->

@@ -1,0 +1,270 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- HEAD SECTION -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Bootstrap Personal Portfolio Template For Free by Binary Theme</title>
+    <!--GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--BOOTSTRAP MAIN STYLES -->
+    <link href="{% static 'assets1/css/bootstrap.css' %}" rel="stylesheet" />
+    <!--FONTAWESOME MAIN STYLE -->
+    <link href="{% static 'assets1/css/font-awesome.min.css' %}" rel="stylesheet" />
+    <!--CUSTOM STYLE -->
+    <link href="{% static 'assets1/css/style.css' %}" rel="stylesheet" />
+    <!--  jsdelivr link  v3.5.0 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/splide.min.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/themes/splide-skyblue.min.css">
+    <style>
+        .taget_image_with_more_dis {
+            margin-top: 10px;
+            height: 50%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5%;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+            filter: saturate(1.2);
+            filter: brightness(1.2);
+            filter: contrast(1.5);
+        }
+
+        .padtop {
+            margin-top: 80px;
+        }
+
+        
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: #ffffff;
+    }
+
+
+    /* div,
+    aside {
+        border: 1px solid black;
+    } */
+    header {
+        background-color: #dac931;
+    }
+
+    p {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #490505;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-transform: uppercase;
+        text-align: left;
+        margin: 20px 0;
+        border-bottom: 2px solid #e7e2e2;
+        padding-bottom: 10px;
+    }
+
+
+
+
+    .section_map {
+        height: 400px;
+    }
+    .item_section{
+        margin-top: 5px;
+    }
+
+    .fldk {
+        color: #D4C49A;
+    }
+
+    .left {
+        background-color: #D4C49A;
+        width: 30%;
+        border-right: 12px solid rgb(211, 207, 207);
+        height: 100%;
+    }
+
+    .imgg {
+        margin-top: 180px;
+        background-color: #338822;
+        max-width: 80%;
+        height: 60%;
+    }
+
+    .imggg {
+        margin-top: 100px;
+    }
+
+    .right {
+        background-color: #FFA500;
+        width: 70%;
+        height: 100%;
+    }
+
+    .itinerary_item {
+        padding-top: 2px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    /* css for map  */
+    #mapid {
+        height: 100%;
+        background-color: #878bb8;
+        border: 1px solid gray;
+        font-size: 10px;
+    }
+
+    .scrollable {
+        max-height: 100%;
+        overflow-y: scroll;
+    }
+    .iteme_info{
+    padding-top: 0px;
+    margin-top: 0px;
+    }
+    .restaurants-image{
+            height: 398px;
+			width: 300px;
+			object-fit: cover;
+			filter: saturate(1.2);
+			filter: brightness(1.2);
+			filter: contrast(1.5);
+
+    }
+    #header-section {
+        background-size: cover;
+        filter: saturate(1.2);
+		filter: brightness(1.2);
+		filter: contrast(1.5);
+    }
+
+    /* .leaflet-routing-container {
+        display: none;
+    } */
+</style>
+{%block style%}
+
+{% endblock %}
+</head>
+<!--END HEAD SECTION -->
+
+<body>
+    <!-- NAV SECTION -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">safir With_Us</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'myapp:home' %}">HOME</a></li>
+                    <li><a href="#information">information</a></li>
+                    <li><a href="#localisation">localisation</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    {%block content %}
+
+    {%endblock%}
+
+
+    <!--FOOTER SECTION -->
+    <div id="footer">
+        <div class="container">
+            <div class="row ">
+                &copy; 2014 www.safir_with_us.com | All Right Reserved
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--END FOOTER SECTION -->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY LIBRARY -->
+    <script src="{% static 'assets1/js/jquery.js' %}"></script>
+    <!-- CORE BOOTSTRAP LIBRARY -->
+    <script src="{% static 'assets1/js/bootstrap.min.js' %}"></script>
+    <!-- SCROLL REVEL LIBRARY FOR SCROLLING ANIMATIONS-->
+
+    <script src="{% static 'assets1/js/scrollReveal.js' %}"></script>
+    <!-- CUSTOM SCRIPT-->
+    <script src="{% static 'assets1/js/custom.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/js/splide.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // First instance of Splide 
+            new Splide('.splide-restaurants', {
+                type: 'loop',
+                gap: '0px',
+                speed: 1999,
+                perPage: 3,
+                autoplay: true,
+                interval: 3000,
+                arrows: false,
+                pagination: false,
+                pauseOnHover: true,
+                wheel: true,
+            }).mount();
+    
+            // Second instance of Splide
+            new Splide('.splide-hotels', {
+                type: 'loop',
+                gap: '0px',
+                speed: 1500,
+                perPage: 3,
+                autoplay: true,
+                interval: 4000,
+                arrows: true,
+                pagination: true,
+                pauseOnHover: true,
+                wheel: true,
+            }).mount();
+        });
+    </script>
+    {%block scripts%}
+
+    {%endblock%}
+    
+    
+
+
+</body>
+
+</html>

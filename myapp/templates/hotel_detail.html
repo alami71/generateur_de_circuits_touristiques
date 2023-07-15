@@ -1,0 +1,107 @@
+{%extends 'base_detail.html' %}
+{% load static %}
+{%block style%}
+<style>
+    #header-section {
+        background: url({% static 'assets/images/img/hotels/' %}{{ hotel.image_hot2 }} ) no-repeat center top;
+    }
+</style>
+
+{% endblock %}
+
+
+
+{%block content %}
+<!-- HEADER SECTION -->
+<div id="header-section">
+    <div class="container">
+        <div class="row centered">
+            <div class="col-md-8 col-md-offset-2">
+                <h1><strong>{{ hotel.nom_hot }}</strong>
+                </h1>
+                <br /> <br /> <br />
+                <h2> destination / {{ hotel.nom_dest }} </h2>
+                <br />
+                <a href="#products-section"> <i class="fa fa-angle-double-down fa-5x down-icon"></i> </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END HEADER SECTION -->
+
+
+<!--WORK/destination SECTION -->
+<div>
+    <div class="container">
+        <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
+            <div class="col-md-8 col-md-offset-2 ">
+
+                <h1>hotel "{{ hotel.nom_hot }}"</h1>
+
+                <h4>
+                    L'hôtel {{ hotel.nom_hot }} est un lieu accueillant situé dans la
+                    charmante ville de {{ hotel.ville_hot }}, au cœur de la province de Darra Tafilalt.
+                </h4>
+            </div>
+        </div>
+        <!-- ./ Main Heading-->
+        <hr />
+        <div id="information" class="row main-low-margin">
+            <div class="col-md-12  col-md-offset-1 ">
+                <div class="col-md-6 col-sm-4 padtop" data-scrollreveal="enter left and move 100px, wait 0.8s">
+                    <img class="taget_image_with_more_dis"
+                        src="{% static 'assets/images/img/hotels/' %}{{ hotel.image_hot1 }}" alt="">
+                    <img class="taget_image_with_more_dis"
+                        src="{% static 'assets/images/img/hotels/' %}{{ hotel.image_hot2 }}" alt="">
+                </div>
+                <div class="col-md-6 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+                    <h4>Information sur "<strong class="color-red">{{ hotel.nom_hot }}</strong>"</h4>
+                    <p>L'hôtel "<strong>{{ hotel.nom_hot }}</strong>" est un établissement accueillant situé dans la
+                        charmante ville de "<strong>{{ hotel.ville_hot }}</strong>", au cœur de la province de Darra
+                        Tafilalt. Cet hôtel offre une expérience unique et mémorable à ses clients. Classé "<strong>
+                            {{hotel.classe_hot }}</strong>", il propose un service de qualité et des installations
+                        modernes. Avec un total de "<strong>{{ hotel.nbchambres }}</strong>" chambres disponibles, les
+                        voyageurs ont l'embarras du choix pour trouver l'hébergement qui correspond le mieux à leurs
+                        besoins. Que vous visitiez Darra Tafilalt pour affaires ou pour le plaisir, l'hôtel
+                        "<strong>{{hotel.nom_hot }}</strong>"
+                        vous offre un séjour confortable et agréable, avec une attention
+                        particulière portée aux moindres détails pour vous offrir une expérience inoubliable.</p>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- ./ Row Content-->
+        <hr />
+        <div id="localisation" class="row main-low-margin bottam-pad"> <br><br><br>
+
+            <div class="col-md-10  col-md-offset-1 ">
+                <div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">
+                    <h4> <strong class="color-red">Position de "{{ hotel.nom_hot }}" </strong></h4>
+                    {{ hotel.carte_hot|safe }}
+
+                    <p>
+                        <i class="fa fa-check"></i> Geographic Information<br />
+                        <i class="fa fa-check"></i> latitude : {{ hotel.latitude }} <br />
+                        <i class="fa fa-check"></i> longitude : {{ hotel.longitude }}<br />
+                        <i class="fa fa-check"></i> hotel id : {{id_hotel}}<br />
+                    </p>
+                    <a href=" {{ hotel.localisation_hot }}" class="btn btn-danger"> map info</a>
+                </div>
+                <div class="col-md-4 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+
+                    <img class="img-margin-product" src="{% static 'assets/images/img/hotels/' %}{{ hotel.image_hot3 }}"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <!-- ./ Row Content-->
+    </div>
+</div>
+<!--END WORK/destination SECTION -->
+{%endblock%}
+
+
+{%block scripts%}
+
+{%endblock%}

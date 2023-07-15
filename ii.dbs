@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="website.sql" id="Project-94a" database="MySql" >
+	<schema name="IF" options="IF NOT EXISTS `website` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci" >
+		<table name="actualite" spec="" >
+			<column name="id_actu" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="id_circuit" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="titre_actu" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<index name="(`id_actu`)" unique="PRIMARY_KEY" spec=", ADD KEY `id_circuit`" >
+				<column name="id_circuit" />
+			</index>
+			<fk name="actualite_ibfk_1" to_schema="IF" to_table="circuit_voyage" delete_action="cascade" update_action="cascade" options="" >
+				<fk_column name="id_circuit" pk="id_circuit" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="admin" spec="" >
+			<column name="id_admin" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="date_ajout" type="DATETIME" jt="93" mandatory="y" >
+				<defo><![CDATA[current_timestamp()]]></defo>
+			</column>
+			<column name="nom_admin" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="prenom_admin" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="email_admin" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="login_admin" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<column name="password_admin" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<column name="photo_admin" type="VARCHAR" length="100" jt="12" >
+				<defo><![CDATA['images\\profile\\user-286.png']]></defo>
+			</column>
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_admin" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="artisanat" spec="" >
+			<column name="id_artisanat" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="nom_artisanat" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<column name="image_artisanat" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="date_modification" type="DATETIME" jt="93" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_artisanat" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="chambre" spec="" >
+			<column name="num_chambre" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="id_hotel" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="type_chambre" type="VARCHAR" length="20" jt="12" mandatory="y" />
+			<column name="prix_chambre" type="DECIMAL" length="10" decimal="2" jt="3" mandatory="y" />
+			<index name="(`num_chambre`, `id_hotel`)" unique="PRIMARY_KEY" spec=", ADD KEY `id_hotel`" >
+				<column name="id_hotel" />
+			</index>
+			<fk name="chambre_ibfk_1" to_schema="IF" to_table="hotel" delete_action="cascade" update_action="cascade" options="" >
+				<fk_column name="id_hotel" pk="id_hotel" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="circuit_voyage" spec="" >
+			<column name="id_circuit" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="ville_depart" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="ville_arrivee" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="trajet" type="TEXT" jt="-1" mandatory="y" />
+			<column name="date_depart" type="DATETIME" jt="93" mandatory="y" />
+			<column name="duree" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="image_cover" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_trajet" type="TEXT" jt="-1" mandatory="y" />
+			<column name="prix" type="DECIMAL" length="10" decimal="2" jt="3" mandatory="y" />
+			<column name="fin_reservation" type="DATE" jt="91" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_circuit_voyage" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="client" spec="" >
+			<column name="id_client" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="nom_client" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="prenom_client" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="email_client" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="login_client" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<column name="password_client" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<column name="date_inscription" type="DATETIME" jt="93" mandatory="y" />
+			<column name="code" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="status" type="VARCHAR" length="12" jt="12" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_client" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="destination" spec="" >
+			<column name="id_dest" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="nom_dest" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="ville_dest" type="VARCHAR" length="20" jt="12" mandatory="y" />
+			<column name="province" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="image_dest1" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_dest2" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_dest3" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="localisation_dest" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="carte_dest" type="TEXT" jt="-1" mandatory="y" />
+			<column name="description_dest" type="TEXT" jt="-1" mandatory="y" />
+			<column name="date_modification" type="DATETIME" jt="93" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_destination" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="hotel" spec="" >
+			<column name="id_hotel" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="nom_hot" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="ville_hot" type="VARCHAR" length="20" jt="12" mandatory="y" />
+			<column name="province" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="image_hot1" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_hot2" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_hot3" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="localisation_hot" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="carte_hot" type="TEXT" jt="-1" mandatory="y" />
+			<column name="nbChambres" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="classe_hot" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="date_modification" type="DATETIME" jt="93" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_hotel" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="materiels" spec="" >
+			<column name="id_materiel" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="nom" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<column name="image1" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image2" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image3" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="prix" type="DECIMAL" length="10" decimal="0" jt="3" mandatory="y" />
+			<column name="description" type="TEXT" jt="-1" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_materiels" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="messages" spec="" >
+			<column name="id_msg" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="date" type="DATETIME" jt="93" mandatory="y" >
+				<defo><![CDATA[current_timestamp()]]></defo>
+			</column>
+			<column name="nom_redacteur" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<column name="email_redacteur" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="sujet" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="message" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_messages" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="moussem" spec="" >
+			<column name="id_moussem" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="nom_moussem" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="ville_moussem" type="VARCHAR" length="20" jt="12" mandatory="y" />
+			<column name="image_moussem1" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_moussem2" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_moussem3" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="description_moussem" type="TEXT" jt="-1" mandatory="y" />
+			<column name="date_modification" type="DATETIME" jt="93" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_moussem" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="plat" spec="" >
+			<column name="id_plat" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="nom_plat" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="image_plat1" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_plat2" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_plat3" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="description_plat" type="TEXT" jt="-1" mandatory="y" />
+			<column name="date_modification" type="DATETIME" jt="93" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_plat" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="reservation" spec="" >
+			<column name="id_res" type="INT" length="30" jt="4" mandatory="y" />
+			<column name="id_client" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="id_hotel" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="tel_client" type="INT" length="15" jt="4" mandatory="y" />
+			<column name="type_chambre" type="VARCHAR" length="25" jt="12" mandatory="y" />
+			<column name="nb_personnes" type="INT" length="11" jt="4" />
+			<column name="date_debut" type="DATE" jt="91" mandatory="y" />
+			<column name="date_fin" type="DATE" jt="91" mandatory="y" />
+			<column name="prix" type="DECIMAL" length="10" decimal="0" jt="3" mandatory="y" />
+			<column name="type_paiement" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="date_res" type="DATETIME" jt="93" mandatory="y" />
+			<column name="status" type="VARCHAR" length="20" jt="12" mandatory="y" />
+			<index name="(`id_res`)" unique="PRIMARY_KEY" spec=", ADD KEY `rf_cl`" options=", ADD KEY `rf_ht` (`id_hotel`)" >
+				<column name="id_client" />
+			</index>
+			<fk name="rf_cl" to_schema="IF" to_table="client" delete_action="cascade" update_action="cascade" options=", ADD CONSTRAINT `rf_ht` FOREIGN KEY (`id_hotel`) REFERENCES `hotel` (`id_hotel`) ON DELETE CASCADE ON UPDATE CASCADE" >
+				<fk_column name="id_client" pk="id_client" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="reservation_materiel" spec="" >
+			<column name="id_res" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="id_client" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="id_materiel" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="tel_client" type="INT" length="16" jt="4" mandatory="y" />
+			<column name="nb_personnes" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="date_debut" type="DATE" jt="91" mandatory="y" />
+			<column name="date_fin" type="DATE" jt="91" mandatory="y" />
+			<column name="prix" type="DECIMAL" length="10" decimal="0" jt="3" mandatory="y" />
+			<column name="type_paiement" type="VARCHAR" length="40" jt="12" mandatory="y" />
+			<column name="status" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="date_res" type="DATETIME" jt="93" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_reservation_materiel" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="reservation_voyage" spec="" >
+			<column name="id_reservation" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="id_client" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="id_circuit" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="tel_client" type="INT" length="16" jt="4" mandatory="y" />
+			<column name="nb_personnes" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="prix" type="DECIMAL" length="10" decimal="0" jt="3" mandatory="y" />
+			<column name="type_paiement" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="date_res" type="DATETIME" jt="93" mandatory="y" />
+			<column name="status" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<index name="(`id_reservation`)" unique="PRIMARY_KEY" spec=", ADD KEY `id_client`" options=", ADD KEY `id_circuit` (`id_circuit`)" >
+				<column name="id_client" />
+			</index>
+			<fk name="reservation_voyage_ibfk_1" to_schema="IF" to_table="client" delete_action="cascade" update_action="cascade" options=", ADD CONSTRAINT `reservation_voyage_ibfk_2` FOREIGN KEY (`id_circuit`) REFERENCES `circuit_voyage` (`id_circuit`) ON DELETE CASCADE ON UPDATE CASCADE" >
+				<fk_column name="id_client" pk="id_client" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+		<table name="restaurant" spec="" >
+			<column name="id_rest" type="INT" length="11" jt="4" mandatory="y" />
+			<column name="nom_rest" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="ville_rest" type="VARCHAR" length="30" jt="12" mandatory="y" />
+			<column name="province" type="VARCHAR" length="20" jt="12" mandatory="y" />
+			<column name="image_rest1" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_rest2" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="image_rest3" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="localisation_rest" type="VARCHAR" length="255" jt="12" mandatory="y" />
+			<column name="carte_rest" type="TEXT" jt="-1" mandatory="y" />
+			<column name="description_rest" type="TEXT" jt="-1" mandatory="y" />
+			<column name="date_modification" type="DATETIME" jt="93" mandatory="y" />
+			<column name="PRIMARY" type="VARCHAR" jt="12" mandatory="y" />
+			<index name="pk_restaurant" unique="PRIMARY_KEY" >
+				<column name="PRIMARY" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8]]></options>
+		</table>
+	</schema>
+	<layout name="Layout" id="Layout-1c18" show_relation="columns" >
+		<entity schema="IF" name="actualite" color="F4DDBE" x="1920" y="48" />
+		<entity schema="IF" name="admin" color="BED3F4" x="1360" y="1072" />
+		<entity schema="IF" name="artisanat" color="BED3F4" x="1616" y="1072" />
+		<entity schema="IF" name="chambre" color="BEBEF4" x="1920" y="736" />
+		<entity schema="IF" name="circuit_voyage" color="F4DDBE" x="2128" y="48" />
+		<entity schema="IF" name="client" color="C7F4BE" x="1120" y="48" />
+		<entity schema="IF" name="destination" color="BED3F4" x="1616" y="1360" />
+		<entity schema="IF" name="hotel" color="BEBEF4" x="2160" y="736" />
+		<entity schema="IF" name="materiels" color="BED3F4" x="1360" y="1360" />
+		<entity schema="IF" name="messages" color="BED3F4" x="1104" y="1360" />
+		<entity schema="IF" name="moussem" color="BED3F4" x="1056" y="1072" />
+		<entity schema="IF" name="plat" color="BED3F4" x="1088" y="800" />
+		<entity schema="IF" name="reservation" color="C7F4BE" x="1376" y="352" />
+		<entity schema="IF" name="reservation_materiel" color="C7F4BE" x="1632" y="48" />
+		<entity schema="IF" name="reservation_voyage" color="C7F4BE" x="1376" y="48" />
+		<entity schema="IF" name="restaurant" color="BED3F4" x="1360" y="736" />
+		<callout x="48" y="176" pointer="Round" >
+			<comment><![CDATA[Add tables to the layout diagram (here) by drag & drop from the Project Tree.
+Drop this callout from its right-click pop-up.]]></comment>
+		</callout>
+	</layout>
+</project>

@@ -1,0 +1,85 @@
+{% include 'base2.html' %}
+
+{%block content%}
+
+<section class="tour section-wrapper container" id="circuit">
+    <h2 class="section-title">
+      Trouvez votre circuit touristique
+    </h2>
+    <p class="section-subtitle">
+      Où voulez-vous partir ?
+    </p>
+    <form method="POST" action="{% url 'myapp:Tcircuit' %}">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="form-group">
+            <label for="destination">Choisissez votre destination de circuit :</label>
+            <select name="destination" id="destination" class="form-control border-radius" required>
+              <option value="">Choisissez une destination</option>
+              {% for dest in destination %}
+                <option value="{{ dest.id_dest }}">{{ dest.nom_dest }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row" id="destination-inputs">
+        <!-- Ici, les nouvelles sélections de destination seront ajoutées dynamiquement -->
+      </div>
+  
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="btn btn-default border-radius custom-button" onclick="addInput()">
+            +
+          </div>
+        </div>
+  
+        <div class="col-md-3 col-sm-6">
+          <button type="submit" class="btn btn-default border-radius custom-button">
+            Générer le circuit
+          </button>
+        </div>
+      </div>
+    </form>
+  
+    <!-- JS pour ajouter un input lorsque l'utilisateur clique sur + -->
+    <script>
+      let inputCount = 1;
+  
+      function addInput() {
+        const destinationInputs = document.getElementById("destination-inputs");
+  
+        const newInput = document.createElement("div");
+        newInput.classList.add("col-md-3", "col-sm-6", "destination-input");
+        newInput.innerHTML = `
+          <div class="form-group">
+            <label for="destination${inputCount}">Choisissez une destination :</label>
+            <select name="destination" id="destination${inputCount}" class="form-control border-radius" required>
+              <option value="">Choisissez une destination</option>
+              {% for dest in destination %}
+                <option value="{{ dest.id_dest }}">{{ dest.nom_dest }}</option>
+              {% endfor %}
+            </select>
+            <button type="button" class="btn btn-default remove-button" onclick="removeInput(this)">
+              Annuler
+            </button>
+          </div>
+        `;
+  
+        destinationInputs.appendChild(newInput);
+        inputCount++;
+      }
+  
+      function removeInput(button) {
+        const inputContainer = button.parentNode.parentNode;
+        inputContainer.parentNode.removeChild(inputContainer);
+      }
+    </script>
+  </section>
+{%endblock %}  
+
+
+
+

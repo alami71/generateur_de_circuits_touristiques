@@ -1,0 +1,347 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en-US"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en-US">	<![endif]-->
+<!--[if IE 9]><html class="ie ie9 lte9" lang="en-US"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="noIE" lang="en-US">
+<!--<![endif]-->
+
+<head>
+	<!-- meta -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Safir With Us</title>
+
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/ionicons.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/flexslider.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/section.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/about.css' %}">
+	<!--  jsdelivr link  v3.5.0 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/splide.min.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/themes/splide-skyblue.min.css">
+	<style>
+		li.splide__slide img.destination-image {
+			width: 350px;
+			height: 450px;
+			/*filter: grayscale(100%);*/
+			filter: brightness(1.2);
+			filter: saturate(1.2);
+			filter: contrast(1.5);
+		}
+
+		li.splide__slide img.destination-image1 {
+			width: 350px;
+			height: 450px;
+			/* filter: sepia(50%); */
+			filter: contrast(1.5);
+			filter: brightness(1.2);
+			filter: saturate(1.2);
+		}
+
+		li.splide__slide img.destination-image2 {
+			width: 350px;
+			height: 450px;
+			filter: saturate(1.2);
+			filter: brightness(1.2);
+			filter: contrast(1.5);
+		}
+
+		.taget_image_with_more_dis {
+			margin-top: 9px;
+			height: 398px;
+			width: 100%;
+			object-fit: cover;
+			filter: saturate(1.2);
+			filter: brightness(1.2);
+			filter: contrast(1.5);
+		}
+
+		.taget_image1 {
+			margin-top: 9px;
+			padding: 5px;
+			height: 100%;
+			height: 400px;
+			background-color: rgb(255, 255, 255);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.overlay {
+			position: absolute;
+			bottom: 0;
+			background: rgb(170, 169, 164);
+			background: rgba(0, 0, 0, 0.5);
+			/* Black see-through */
+			color: #f1f1f1;
+			width: 100%;
+			height: 19%;
+			transition: .5s ease;
+			color: white;
+			font-size: 20px;
+			padding: 20px;
+			text-align: center;
+			opacity: 0.4;
+		}
+
+		.container:hover .overlay {
+			opacity: 1;
+			display: block;
+
+		}
+
+		.section-background {
+			background-repeat: no-repeat;
+			background-position: bottom;
+			background-attachment: fixed;
+			text-transform: uppercase;
+			background: url('/static/assets/images/img/destinations/gorge-le-todra-8268136.jpg');
+			text-align: center;
+			background-size: cover;
+			
+		}
+		.navv{
+			font-weight: 35px;;
+			color: rgb(0, 0, 0);
+			font-size: larger;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- Home -->
+	<section class="header">
+
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html" title="HOME"><i class="ion-paper-airplane"></i> euro
+						<span>With_Us</span></a>
+				</div> <!-- /.navbar-header -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="{% url 'myapp:home' %}">Home</a></li>
+						<li><a href="{% url 'myapp:about' %}"><strong class="navv" >Ville</strong></a></li>
+						<li><a href="{% url 'myapp:test' %}"><strong class="navv" >Trouver_Circuit</strong></a></li>
+						<li><a href="/admin/"><strong class="navv" >admin</strong></a></li>
+					</ul> <!-- /.nav -->
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+	</section> <!-- /#header -->
+
+	<!-- Section Background -->
+	<section class="section-background">
+		<div class="container">
+			<h2 class="page-header">
+				Draa-Tafilalt
+			</h2>
+		</div> <!-- /.container -->
+	</section>
+	<!-- /.section-background -->
+
+
+
+	<!-- Who we are -->
+	<section class="wwa section-wrapper">
+		<div class="container">
+			<h2 class="section-title">
+				Daraa-Tafilalt
+			</h2>
+			<p class="section-subtitle">
+				La région de Draa-Tafilalt est un véritable joyau du Maroc.Oasis mystiques, désert infini. Richesse
+				culturelle et paysages époustouflants. Une immersion envoûtante.
+			</p>
+
+
+
+			<div class="row">
+				{% for ville, destinations in destinations_by_ville.items %}
+				{% if destinations|length > 1 %}
+				<div class="container mt-4">
+					<h1 class="text-secondary">{{ ville }}</h1>
+					{% for destination in destinations %}
+					<div class="col-md-3 taget_image1">
+						<a href="{% url 'myapp:destination_page' destination.id_dest %}">
+							<img class="taget_image_with_more_dis"
+								src="{% static 'assets/images/img/destinations/' %}{{ destination.image_dest1 }}"
+								alt="Image 1" class="img-responsive">
+							<div class="overlay">{{ destination.nom_dest }}</div>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+				{% else %}
+				<div class="container mt-4">
+					<h1 class="text-secondary">{{ ville }}</h1>
+					<div class="splide bg-secondary">
+						<div class="splide__slider">
+							<div class="splide__track">
+								<ul class="splide__list">
+									{% for destination in destinations %}
+									<li class="splide__slide">
+										<a href="{% url 'myapp:destination_page' destination.id_dest %}">
+											<img class="destination-image"
+												src="{% static 'assets/images/img/destinations/' %}{{ destination.image_dest1 }}"
+												alt="aneirin">
+										</a>
+									</li>
+									<li class="splide__slide">
+										<a href="{% url 'myapp:destination_page' destination.id_dest %}">
+											<img class="destination-image1"
+												src="{% static 'assets/images/img/destinations/' %}{{ destination.image_dest2 }}"
+												alt="dristi">
+										</a>
+									</li>
+									<li class="splide__slide">
+										<a href="{% url 'myapp:destination_page' destination.id_dest %}">
+											<img class="destination-image2"
+												src="{% static 'assets/images/img/destinations/' %}{{ destination.image_dest3 }}"
+												alt="charmaine">
+										</a>
+									</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endif %}
+				{% endfor %}
+
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+	<div class="subscribe section-wrapper">
+		<a class="brand-logo" href="index.html" title="HOME"><i class="ion-paper-airplane"></i> Safir
+			<span>With_Us</span></a>
+		<p class="subscribe-now">
+			   Draa-Tafilalt
+		</p>
+		<ul class="social-icon">
+			<li><a href="#"><i class="ion-social-twitter"></i></a></li>
+			<li><a href="#"><i class="ion-social-facebook"></i></a></li>
+			<li><a href="#"><i class="ion-social-linkedin-outline"></i></a></li>
+			<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+		</ul>
+	</div> <!-- /.subscribe -->
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="text-left">
+						&copy; Copyright Safir With Us
+					</div>
+				</div>
+				<div class="col-xs-4">
+					pfe  <a href="#"> Draa-Tafilalt </a>
+				</div>
+				<div class="col-xs-4">
+					<!-- <div class="top">
+						<a href="#header">
+							<i class="ion-arrow-up-b"></i>
+						</a>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+	<script src="{% static 'assets/js/jquery-1.11.2.min.js' %}"></script>
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'assets/js/contact.js' %}"></script>
+	<script src="{% static 'assets/js/script.js' %}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/js/splide.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.js"></script>
+	<script>
+		const splideInstances = [];
+
+		document.addEventListener('DOMContentLoaded', function () {
+			const splideElements = document.querySelectorAll('.splide');
+
+			splideElements.forEach(function (element) {
+				const splideInstance = new Splide(element, {
+					type: 'loop',
+					gap: '0px',
+					//rewind: true,
+					speed: 500,
+					perPage: 3,
+					start: 4,
+					perMove: 1,
+					autoplay: true,
+					interval: 3000,
+					arrows: false,
+					pagination: false,
+					pauseOnHover: true,
+					wheel: true,
+				});
+
+				splideInstances.push(splideInstance);
+			});
+
+			splideInstances.forEach(function (instance) {
+				instance.mount();
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			new Splide('.splide', {
+				type: 'loop',
+				gap: '0px',
+				speed: 500,
+				perPage: 3,
+				start: 4,
+				perMove: 1,
+				autoplay: true,
+				interval: 3000,
+				arrows: false,
+				pagination: false,
+				pauseOnHover: true,
+				wheel: true,
+			}).mount();
+		});
+	</script>
+
+
+
+
+
+
+
+</body>
+
+</html>

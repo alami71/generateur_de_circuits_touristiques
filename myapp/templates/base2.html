@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en-US"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en-US">	<![endif]-->
+<!--[if IE 9]><html class="ie ie9 lte9" lang="en-US"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="noIE" lang="en-US">
+<!--<![endif]-->
+
+<head>
+	<!-- meta -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>SAFIR With Us</title>
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/ionicons.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/flexslider.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+				<script src="assets/js/html5shiv.js"></script>
+				<script src="assets/js/respond.js"></script>
+			<![endif]-->
+
+	<!--[if IE 8]>
+		    	<script src="assets/js/selectivizr.js"></script>
+		    <![endif]-->
+	{%block style%}
+
+	{% endblock %}
+	<style>
+		.navv{
+			font-weight: 35px;;
+			color: rgb(0, 0, 0);
+			font-size: larger;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href=" {% url 'myapp:home' %}" title="HOME"><i class="ion-paper-airplane"></i>
+					SAFIR
+					<span>With Us</span></a>
+			</div> <!-- /.navbar-header -->
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="{% url 'myapp:home' %}"><strong class="navv">Accueil</strong>  </a></li>
+					<li><a href="{% url 'myapp:about' %}"> <strong class="navv">Ville</strong></a></li>
+					<li><a href="{% url 'myapp:test' %}"> <strong class="navv">Trouver_Circuit</strong></a></li>
+					<li><a href="/admin/"> <strong class="navv">admin</strong></a></li>
+				</ul> <!-- /.nav -->
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container -->
+	</nav>
+	{%block content%}
+
+	{%endblock %}
+
+	{%block scripts%}
+
+	{%endblock%}

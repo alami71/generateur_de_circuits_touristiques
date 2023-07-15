@@ -1,0 +1,21 @@
+//////////////////////////////////////////////////////////////////////////////////
+Run the following command to generate the requirements.txt file:
+pip freeze > requirements.txt
+**********************************************************************************
+scipy
+tsp_solver
+djnago
+pipenv 
+pip install mysqlclient
+--------------------------------
+pipenv install django && pip install scipy && pip install tsp_solver && pip install mysqlclient
+---------------------------install libgdal ----------------------------------------
+sudo apt-get install gdal-bin
+
+In the settings.py file, find the GDAL_LIBRARY_PATH setting and set its value to the path of the GDAL library file. If the setting doesn't exist, you can add it to the file:
+
+python
+
+GDAL_LIBRARY_PATH = '/usr/lib/libgdal.so.26.0.4'
+-----------------------------------------------------------------------------------
+

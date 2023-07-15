@@ -1,0 +1,99 @@
+{%extends 'base_detail.html' %}
+{% load static %}
+{%block style%}
+<style>
+    #header-section {
+        background: url({% static 'assets/images/img/restaurants/' %}{{ restaurant.image_rest1}} ) no-repeat center top;
+        background-size: cover;
+    }
+
+</style>
+
+{% endblock %}
+
+
+
+{%block content %}
+<!-- HEADER SECTION -->
+<div id="header-section">
+    <div class="container">
+        <div class="row centered">
+            <div class="col-md-8 col-md-offset-2">
+                <h1><strong>{{ restaurant.ville_rest }}</strong>
+                </h1>
+                <br /> <br /> <br />
+                <h2> {{ restaurant.nom_rest }} </h2>
+                <br />
+                <a href="#products-section"> <i class="fa fa-angle-double-down fa-5x down-icon"></i> </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END HEADER SECTION -->
+
+
+<!--WORK/destination SECTION -->
+<div>
+    <div class="container">
+        <div class="row main-top-margin text-center" data-scrollreveal="enter top and move 100px, wait 0.3s">
+            <div class="col-md-8 col-md-offset-2 ">
+
+                <h1>restaurant "{{ restaurant.nom_rest }}"</h1>
+
+                <h4>
+                   {{ restaurant.nom_rest }} est un lieu accueillant situé dans la
+                    charmante ville de {{ restaurant.ville_rest }}, au cœur de la province de Darra Tafilalt.
+                </h4>
+            </div>
+        </div>
+        <!-- ./ Main Heading-->
+        <hr />
+        <div id="information" class="row main-low-margin">
+            <div class="col-md-12  col-md-offset-1 ">
+                <div class="col-md-6 col-sm-4 padtop" data-scrollreveal="enter left and move 100px, wait 0.8s">
+                    <img class="taget_image_with_more_dis"
+                        src="{% static 'assets/images/img/restaurants/' %}{{ restaurant.image_rest1 }}" alt="">
+                    <img class="taget_image_with_more_dis"
+                        src="{% static 'assets/images/img/restaurants/' %}{{ restaurant.image_rest2 }}" alt="">
+                </div>
+                <div class="col-md-6 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+                    <h4>  <strong class="color-red">Information sur {{ restaurant.nom_rest }}</strong> </h4>
+                    {{ restaurant.description_rest|safe }}
+                </div>
+            </div>
+
+        </div>
+        <!-- ./ Row Content-->
+        <hr />
+        <div id="localisation" class="row main-low-margin bottam-pad"> <br><br><br>
+
+            <div class="col-md-10  col-md-offset-1 ">
+                <div class="col-md-8 " data-scrollreveal="enter left and move 100px, wait 0.4s">
+                    <h4> <strong class="color-red">Position de "{{ restaurant.nom_rest }}" </strong></h4>
+                    {{ restaurant.carte_rest|safe }}
+
+                    <p>
+                        <i class="fa fa-check"></i> Geographic Information<br />
+                        <i class="fa fa-check"></i> latitude :   <br />
+                        <i class="fa fa-check"></i> longitude :  <br />
+                        <i class="fa fa-check"></i> hotel id : {{id_rest}}<br />
+                    </p>
+                    <a href=" {{ restaurant.localisation_rest }}" class="btn btn-danger"> map info</a>
+                </div>
+                <div class="col-md-4 " data-scrollreveal="enter right and move 100px, wait 0.4s">
+
+                    <img class="img-margin-product" src="{% static 'assets/images/img/restaurants/' %}{{ restaurant.image_rest3 }}"
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <!-- ./ Row Content-->
+    </div>
+</div>
+<!--END WORK/destination SECTION -->
+{%endblock%}
+
+
+{%block scripts%}
+
+{%endblock%}

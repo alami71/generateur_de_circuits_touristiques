@@ -1,0 +1,479 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7 lte9 lte8 lte7" lang="en-US"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="en-US">	<![endif]-->
+<!--[if IE 9]><html class="ie ie9 lte9" lang="en-US"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="noIE" lang="en-US">
+<!--<![endif]-->
+
+<head>
+	<!-- meta -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Safir With Us</title>
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/ionicons.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.theme.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/flexslider.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+	<!--  jsdelivr link  v3.5.0 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/splide.min.css">
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/css/themes/splide-skyblue.min.css">
+	<!--  jsdelivr link  v3.5.0 -->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+				<script src="assets/js/html5shiv.js"></script>
+				<script src="assets/js/respond.js"></script>
+			<![endif]-->
+
+	<!--[if IE 8]>
+	<script src="assets/js/selectivizr.js"></script><![endif]-->
+	<!-- style for target section -->
+	<style>
+		.taget_image1 {
+			margin: 0;
+			padding: 5px;
+			height: 100%;
+			background-color: rgb(189, 189, 194);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.taget_image2-1 {
+			height: 300px;
+			width: 100%;
+			object-fit: cover;
+			filter: contrast(180%);
+		}
+
+		.taget_image2-2 {
+			height: 400px;
+			width: 100%;
+			object-fit: cover;
+			filter: contrast(180%);
+		}
+
+		.destination-image {
+			width: 300px;
+			height: 400px;
+
+		}
+		.navv{
+			font-weight: bolder;
+			color: rgb(0, 0, 0);
+			font-size: larger;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{% url 'myapp:home' %}" title="HOME"><i class="ion-paper-airplane"></i>
+					Safir
+					<span>With_Us</span></a>
+			</div> <!-- /.navbar-header -->
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="{% url 'myapp:home' %}"> <strang class="navv">Accueil </strang></a></li>
+					<li><a href="{% url 'myapp:about' %}"> <strang class="navv">Ville</strang> </a></li>
+					<li><a href="{% url 'myapp:test' %}"> <strang class="navv" >Trouver_Circuit</strang></a></li>
+					<li><a href="/admin/"><strang class="navv">admin</strang></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<div id="header">
+		<div class="flexslider">
+			<ul class="slides">
+				<li class="slider-item">
+					<video class="video-background" autoplay loop muted>
+						<source src="{% static 'Morocco.mp4' %}" type="video/mp4">
+					</video>
+					<div class="text-overlay">
+						<h1 class="header-title">
+							<span>Travel</span> is <span>life</span>
+						</h1>
+						<p class="header-sub-title">
+							Tourism: It leaves you speechless, then turns you into a storyteller.
+						</p>
+						<button class="btn custom-btn">
+							<a href="{% url 'myapp:test' %}"></a>Générer un circuit ici
+						</button>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- genere un sercuit par vile -->
+	<section class="tour section-wrapper container">
+		<h2 class="section-title">
+			Trouvé ton circuit touristique
+		</h2>
+		<p class="section-subtitle">
+			Où vous voulez partir?
+		</p>
+		<div class="row">
+			<div class="col-md-3 col-sm-6">
+				<form role="form" class="form-dropdown" method="GET" action="{% url 'myapp:search_cities' %}">
+					<div class="form-group">
+						<label for="sel1">Destinations </label>
+						<select class="form-control border-radius" id="sel1" name="region">
+							<option value="daraa">Daraa</option>
+							<option value="tafilalet">Tafilat</option>
+							<!-- Add more options as needed -->
+						</select>
+					</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="input-group">
+					<input type="text" class="form-control border-radius border-right" placeholder="Arrival"
+						name="start_ville" />
+					<span class="input-group-addon border-radius custom-addon">
+						<i class="ion-ios-calendar"></i>
+					</span>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<div class="input-group">
+					<input type="text" class="form-control border-radius border-right" placeholder="Departure"
+						name="end_ville" />
+					<span class="input-group-addon border-radius custom-addon">
+						<i class="ion-ios-calendar"></i>
+					</span>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-6">
+				<input type="submit" value="Search" class="btn btn-default border-radius custom-button">
+				</input>
+			</div>
+			</form>
+
+		</div>
+	</section>
+	<!-- /.tour -->
+
+	<!-- les circuits disponibles -->
+	<section class="offer section-wrapper">
+		<div class="container">
+			<h2 class="section-title">
+				les circuits disponibles
+			</h2>
+			<p class="section-subtitle">
+				Veuillez sélectionner votre itinéraire afin de générer un circuit touristique.
+			</p>
+			<div class="row">
+				{% for circuit in circuitVoyage %}
+				<div class="col-sm-3 col-xs-6">
+					<div class="offer-item">
+						<div class="icon">
+							<form action="{% url 'myapp:circuit' %}" method="GET">
+								<button type="submit" name="circuit" value="{{ forloop.counter }}">
+									<img width="210px" height="250px"
+										src="{% static 'assets/images/img/circuit/' %}{{ circuit.image_cover }}" alt=""
+										srcset="">
+								</button>
+							</form>
+						</div>
+					</div>
+				</div> <!-- /.col-md-3 -->
+				{% endfor %}
+			</div>
+		</div> <!-- /.container -->
+	</section>
+
+	<!--  todo ville  to visit -->
+	<section class="visit section-wrapper">
+		<div class="container">
+			<h2 class="section-title">
+				Les ville de la région
+			</h2>
+			<p class="section-subtitle">
+				Le tourisme : cela vous laisse sans voix, puis vous transforme en conteur.
+			</p>
+
+			<div class="container mt-4">
+
+				<hr>
+				<div class="splide bg-secondary">
+					<div class="splide__slider">
+						<div class="splide__track">
+							<ul class="splide__list">
+								{%for ville in random_Ville%}
+								<li class="splide__slide">
+									<a href="{% url 'myapp:ville_page' ville.ville_id %}">
+										<img class="destination-image"
+											src="{% static 'assets/images/img/villes/' %}{{ ville.image1 }}"
+											alt="aneirin"></a>
+								</li>
+								{%endfor%}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div> <!-- /.container -->
+	</section>
+	<!--  fin  Top place to visit -->
+
+
+	<!-- todo target section -->
+	<div class="container target_section">
+		<h2 class="section-title">
+			Top destination de la région
+		</h2>
+		<p class="section-subtitle">
+			Le tourisme : cela vous laisse sans voix, puis vous transforme en conteur.
+		</p>
+		<div class="row">
+			<div class="col-md-4 taget_image1">
+				<a href="{% url 'myapp:destination_page' random_destinations.0.id_dest %}">
+					<img class="taget_image2-1"
+						src="{% static 'assets/images/img/destinations/' %}{{ random_destinations.0.image_dest1 }}"
+						alt="Image 1" class="img-responsive"></a>
+			</div>
+			<div class="col-md-4 taget_image1">
+				<a href="{% url 'myapp:destination_page' random_destinations.1.id_dest %}">
+					<img class="taget_image2-1"
+						src="{% static 'assets/images/img/destinations/' %}{{random_destinations.1.image_dest1}}"
+						alt="Image 2" class="img-responsive"></a>
+			</div>
+			<div class="col-md-4 taget_image1">
+				<a href="{% url 'myapp:destination_page' random_destinations.2.id_dest %}"><img class="taget_image2-1"
+						src="{% static 'assets/images/img/destinations/' %}{{random_destinations.2.image_dest1}}"
+						alt="Image 3" class="img-responsive"></a>
+			</div>
+		</div>
+		<div class="row" style="color:rgb(255, 123, 0);">
+			<div class="col-md-6 taget_image1">
+				<a href="{% url 'myapp:destination_page' random_destinations.3.id_dest %}"><img class="taget_image2-2"
+						src="{% static 'assets/images/img/destinations/' %}{{random_destinations.3.image_dest1}}"
+						alt="Image 4" class="img-responsive"></a>
+			</div>
+			<div class="col-md-6 taget_image1">
+				<a href="{% url 'myapp:destination_page' random_destinations.4.id_dest %}">
+					<img class="taget_image2-2"
+						src="{% static 'assets/images/img/destinations/'%}{{random_destinations.4.image_dest1}}"
+						alt="Image 5" class="img-responsive"> </a>
+			</div>
+		</div>
+
+	</div>
+	<!-- activite de draa tafillalt  -->
+	<div class="container">
+		<h2 class="section-title">
+			Activitées
+		</h2>
+		<p class="section-subtitle">
+			Activitées de la région
+		</p>
+		<div class="row">
+			<div class="col-md-3 taget_image1">
+				<img class="taget_image2-1"
+					src="{% static 'assets/images/img/moussems/' %}{{ random_Moussem.0.image_moussem1 }}" alt="Image 1"
+					class="img-responsive">
+			</div>
+			<div class="col-md-3 taget_image1">
+				<img class="taget_image2-1"
+					src="{% static 'assets/images/img/moussems/' %}{{ random_Moussem.1.image_moussem1 }}" alt="Image 3"
+					class="img-responsive">
+			</div>
+			<div class="col-md-3 taget_image1">
+				<img class="taget_image2-1"
+					src="{% static 'assets/images/img/moussems/' %}{{ random_Moussem.2.image_moussem1 }}" alt="Image 3"
+					class="img-responsive">
+			</div>
+			<div class="col-md-3 taget_image1">
+				<img class="taget_image2-1"
+					src="{% static 'assets/images/img/moussems/' %}{{ random_Moussem.3.image_moussem1 }}" alt="Image 3"
+					class="img-responsive">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 taget_image1">
+				<img class="taget_image2-1"
+					src="{% static 'assets/images/img/moussems/' %}{{ random_Moussem.4.image_moussem1 }}" alt="Image 1"
+					class="img-responsive">
+			</div>
+			<div class="col-md-3 taget_image1">
+				<img class="taget_image2-1"
+					src="{% static 'assets/images/img/moussems/' %}{{ random_Moussem.5.image_moussem1 }}" alt="Image 2"
+					class="img-responsive">
+			</div>
+			<div class="col-md-3 taget_image1">
+				<img class="taget_image2-1"
+					src="{% static 'assets/images/img/moussems/' %}{{ random_Moussem.6.image_moussem1 }}" alt="Image 3"
+					class="img-responsive">
+			</div>
+			<div class="col-md-3 taget_image1">
+				<img class="taget_image2-1"
+					src="{% static 'assets/images/img/moussems/' %}{{ random_Moussem.7.image_moussem1 }}" alt="Image 3"
+					class="img-responsive">
+			</div>
+		</div>
+	</div>
+	<br><br><br>
+
+	</div>
+	<!-- explore draa tafilalet -->
+	<div class="offer-cta">
+		<div class="container">
+			<div class="offering">
+				<div class="percent">
+					<span style="color:coral">explore draa tafilalet </span>
+				</div>
+				<div class="FTour">
+					 
+				</div>
+				<a class="btn btn-dark price-btn " href="#">
+					explore
+				</a>
+			</div>  
+		</div>  
+	</div>
+
+	<!-- /.Plats de la region -->
+	<section class="additional-services section-wrapper">
+		<div class="container">
+			<h2 class="section-title">
+				Plats de la region
+			</h2>
+			<div class="row">
+				{%for plat in random_Plat %}
+				<div class="col-md-4 col-sm-6">
+					<div class="custom-table">
+						<img width="110" height="168"
+							src="{% static 'assets/images/img/plats/' %}{{ plat.image_plat2 }}" alt=""
+							class="add-srvc-img">
+						<div class="add-srvc-detail">
+							<h4 class="add-srvc-heading">
+								{{ plat.nom_plat }}
+							</h4>
+							<p class="add-srvc"> {{ plat.description_plat|truncatechars:120 }}
+							</p>
+						</div> <!-- /.add-srvc-detail -->
+					</div> <!-- /.custom-table -->
+				</div>
+				{%endfor%}
+
+
+
+
+
+			</div> <!-- /.row -->
+		</div> <!-- /.container -->
+	</section>
+
+
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="text-left">
+						&copy; Copyright Safir With Us
+					</div>
+				</div>
+				<div class="col-xs-4">
+					Theme by <a href="">Ramchoun Younes & EL Alami Anis</a>
+				</div>
+				<div class="col-xs-4">
+					<div class="top">
+						<a href="#header">
+							<i class="ion-arrow-up-b"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+	<script src="{% static 'assets/js/jquery-1.11.2.min.js' %}"></script>
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'assets/js/contact.js' %}"></script>
+	<script src="{% static 'assets/js/jquery.flexslider.js' %}"></script>
+	<script src="{% static 'assets/js/script.js'%}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.5.0/dist/js/splide.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.flexslider').flexslider({
+				animation: "fade",  // Or any other animation type you prefer
+				slideshow: true,   // Make sure this is set to true for autoplay
+				slideshowSpeed: 5000,  // Adjust the delay between slides as needed
+				controlNav: false,
+				directionNav: false,
+				start: function (slider) {
+					slider.addClass('loaded');
+				}
+			});
+		});
+		// Get the video element
+		var video = document.querySelector('.video-background');
+
+		// Add an event listener to wait for the video to load metadata
+		video.addEventListener('loadedmetadata', function () {
+			// Set the desired playback speed
+			video.playbackRate = 2; // Increase the value to increase the speed (e.g., 2 for double speed)
+
+			// Play the video
+			video.play();
+		});
+
+	</script>
+	<!-- target section  -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			new Splide('.splide', {
+				type: 'loop',
+				gap: '0px',
+				speed: 1999,
+				perPage: 3,
+				autoplay: true,
+				interval: 3000,
+				arrows: false,
+				pagination: false,
+				pauseOnHover: true,
+				wheel: true,
+			}).mount();
+		});
+	</script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <style>
+    #mapid {
+        width: 555px;
+        height: 444px;
+    }
+    </style>
+</head>
+<body>
+    <div id="mapid"></div>
+    <!-- ------------- -->
+    <section>
+        <h1>Search Results</h1>
+    
+        <h2>Start City: {{ start_city.ville_name }}</h2>
+        <h2>End City: {{ end_city.ville_name }}</h2>
+        
+        <h3>Number of Cities Between Start and End: {{ nbv }}</h3>
+        
+        <h3>Cities:</h3>
+        <ul>
+            {% for city in cities %}
+            <li>
+                <h4>{{ city.ville_name }}</h4>
+                <p>Population: {{ city.population }}</p>
+                <p>Area: {{ city.area_km2 }} km²</p>
+                <p>Country: {{ city.country }}</p>
+                <p>Region: {{ city.region }}</p>
+                <p>Description: {{ city.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <div>
+        {{ordered_cities}}
+    </div>
+    
+
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+        <script>
+        console.log("Debut d'afficher les cities Marqueur");
+
+    
+    /* */
+    var ordered_cities = [
+        {% for city in ordered_cities %}
+            {lat: '{{ city.lat }}', lng: '{{ city.lng }}', province: '{{ city.province }}' },
+        {% endfor %}
+    ];
+    var provinceMarkers = {
+        'Errachidia': L.icon({
+            iconUrl: '/home/info/django_file/pfe/myapp/static/assets/images/img/icon/arrow-right.png',
+            iconSize: [20, 20]
+        }),
+        'Midelt': L.icon({
+            iconUrl: '{% static "/assets/images/img/icon/arrow-right.png" %}',
+            iconSize: [20, 20]
+        }),
+        'Tinghir': L.icon({
+            iconUrl: 'https://icons8.com/icon/9918/website',
+            iconSize: [20, 20]
+        }),
+        'Zagoura': L.icon({
+            iconUrl: 'https://icons8.com/icon/9918/website',
+            iconSize: [20, 20]
+        }),
+        'Ouarzazate': L.icon({
+            iconUrl: 'https://icons8.com/icon/9918/website',
+            iconSize: [20, 20]
+        }),
+        // Ajoutez les autres provinces avec leurs marqueurs respectifs
+        // ...
+    };
+
+    // Create the Leaflet map and add a tile layer
+    var mymap = L.map('mapid').setView([31.9333, -4.4167], 8);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(mymap);
+
+    // Create an array of Leaflet markers from the cities data
+    var markers = ordered_cities.map(function (city) {
+        var marker = L.marker(L.latLng(city.lat, city.lng), { icon: provinceMarkers[city.province] });
+        marker.bindPopup(city.province);
+        return marker;
+    });
+    
+    // Add the markers to a marker group
+    var markerGroup = L.featureGroup(markers);
+
+    // Create an array of LatLng objects from the cities data
+    var latLngs = ordered_cities.map(function (city) {
+        return L.latLng(city.lat, city.lng);
+    });
+
+    // Create a Leaflet Routing control and add it to the map
+    L.Routing.control({
+        waypoints: latLngs,
+        lineOptions: {
+            styles: [{color: 'blue', opacity: 1, weight: 4}]
+        },
+        show: false, // Hide the default route line
+        createMarker: function (i, waypoint) {
+            // Create a custom marker for each waypoint
+            return L.marker(waypoint.latLng, { icon: provinceMarkers[ordered_cities[i].province] });
+        }
+    }).addTo(mymap);
+
+    // Add the marker group to the map
+    markerGroup.addTo(mymap);
+
+    console.log("Fin d'afficher les cities Marqueur");
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    
+    <h2>Start City: {{ start_city.ville_name }}</h2>
+    <h2>End City: {{ end_city.ville_name }}</h2>
+    
+    <h3>Number of Cities Between Start and End: {{ nbv }}</h3>
+    
+    <h3>Cities:</h3>
+    <ul>
+        {% for city in cities %}
+        <li>
+            <h4>{{ city.ville_name }}</h4>
+            <p>Population: {{ city.population }}</p>
+            <p>Area: {{ city.area_km2 }} km²</p>
+            <p>Country: {{ city.country }}</p>
+            <p>Region: {{ city.region }}</p>
+            <p>Description: {{ city.description }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+ -->

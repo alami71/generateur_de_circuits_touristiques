@@ -1,0 +1,26 @@
+[
+    {
+        "id_dest": 1,
+        "nom_dest": "Ksar el Khorbat",
+        "ville_dest": "Tinejdad",
+        "province": "Errachidia",
+        "image_dest1": "Ksar-Lkhrbat.jpg",
+        "image_dest2": "27778154258_e02da4c1d0_b.jpg",
+        "image_dest3": "Errachida-Web-106.jpg",
+        "description_dest": "<p><span style=\"font-size: 14pt;\">A 50 km &agrave; l'est de <span style=\"color: rgb(0, 0, 0);\"><strong>Tinghir </strong></span>(ou <strong>Tinerhir</strong>), dans la basse vall&eacute;e du Todra, El Khorbat est un ancien ksar (village fortifi&eacute;) b&acirc;ti en terre crue au XIX&egrave;me si&egrave;cle et r&eacute;cemment restaur&eacute; gr&acirc;ce &agrave; la coop&eacute;ration internationale.</span></p>\r\n<p><span style=\"font-size: 14pt;\">La moiti&eacute; des maisons d'El Khorbat sont encore habit&eacute;es. D'autres ont &eacute;t&eacute; r&eacute;habilit&eacute;es et ont re&ccedil;u une nouvelle fonction : une maison d'h&ocirc;tes, un mus&eacute;e, un atelier d'artisanat f&eacute;minin, etc.</span></p>\r\n<p><span style=\"font-size: 14pt;\">L&rsquo;objectif est utiliser l'&eacute;cotourisme pour sauvegarder un patrimoine historique et artistique d&rsquo;une valeur incalculable : les casbahs en terre crue.</span></p>\r\n<p><span style=\"font-size: 14pt;\">El Khorbat est devenu ainsi le point de d&eacute;part id&eacute;al pour les excursions dans les oasis du Sud marocain, les gorges du Todra et du Gheris, la route des mille kasbahs et m&ecirc;me dans les grandes dunes de Merzouga.</span></p>\r\n<p><span style=\"font-size: 14pt;\">Ce projet de tourisme durable a &eacute;t&eacute; lanc&eacute; en 2002 par 3 partenaires, Ahmed Ben Amar, Joan Castellana et Roger Mim&oacute;. Ils collaborent avec l'Association El Khorbat pour le Patrimoine et le D&eacute;veloppement Durable pour am&eacute;liorer les conditions de vie des habitants et pour le d&eacute;veloppement de l'oasis.</span></p>\r\n<p><span style=\"font-size: 14pt;\">Notre projet a obtenu le Troph&eacute;e Maroc du Tourisme Responsable 2010, valeurs, tradition et culture, cat&eacute;gorie nationale.</span></p>\r\n<p><span style=\"font-size: 14pt;\">A El Khorbat vous pouvez acheter des ha&iuml;ks directement aux femmes qui les brodent, ainsi que d'autres produits du terroir. Elles peuvent vous faire aussi des dessins sur vos mains avec du henn&eacute;...</span></p>",
+        "latitude": 31.6004,
+        "longitude": -4.2023
+    },
+    {
+        "id_dest": 14,
+        "nom_dest": "La Zaou\u00efa Naciria ",
+        "ville_dest": "zagoura",
+        "province": "Zagoura",
+        "image_dest1": "Zagora-Web-54-1024x681-1.jpg",
+        "image_dest2": "Zagora-Web-53-1024x681-1.jpg",
+        "image_dest3": "Zaouia_Naciria,_Tamegroute,_60p1.jpg",
+        "description_dest": "<p><span style=\"font-size: 14pt;\">Au temps des caravanes transsahariennes, Tamegroute &eacute;tait un point d&rsquo;escale incontournable en plein essor. Au centre du vigoureux village se trouvait la Zaouia de Tamegroute, Haut lieu de spiritualit&eacute; fond&eacute; au 16&egrave;me si&egrave;cle. Celle-ci deviendra plus tard la Zaou&iuml;a Naciria, et jouera un r&ocirc;le d'avant-garde dans les diff&eacute;rents domaines de la science et de la pens&eacute;e, outre sa mission religieuse et sociale. La Zaou&iuml;a Naciria de Tamegroute est aujourd&rsquo;hui un patrimoine culturel national, un lieu de recueillement et un monument qui conserve des tr&eacute;sors historiques. Le P&egrave;re Fondateur La Zaouia Naciria Jaafariya Zainabiya Chadiliya trouve ses racines en 1575, lorsque Cheikh Abou Hafs Omar Ben Ahmed Al Ansari, un des notables et mystique du Dr&acirc;a, s&rsquo;installe &agrave; Tamegroute, un foyer de brassage humain, et y fonde une Zaou&iuml;a pour diffuser des valeurs spirituelles, &agrave; travers sa Tariqa soufie (voie mystique) bas&eacute;e sur la Sunna. Un si&egrave;cle plus tard, le visionnaire &agrave; la foi g&eacute;n&eacute;reuse, Cheikh Sidi M&rsquo;hammad Ben Nacer fera de la Zaou&iuml;a un grand centre de la culture soufie, dot&eacute; d&rsquo;une grande biblioth&egrave;que, et dont le rayonnement s&rsquo;&eacute;tendra sur le reste du Maroc et au-del&agrave; vers les pays du Soudan. Elle sera connue d&eacute;sormais sous l&rsquo;appellation de Zaou&iuml;a Naciria, et jouira d&rsquo;une grande influence spirituelle, socio-&eacute;conomique et politique Le tombeau de l&rsquo;embl&eacute;matique Cheikh se situe pr&egrave;s de la porte d&rsquo;entr&eacute;e de la Zaou&iuml;a, dans le mausol&eacute;e connu sous le nom du jardin des Cheikhs, en hommage &agrave; la m&eacute;moire des grands soufis qui tiss&egrave;rent l&rsquo;histoire de la prestigieuse Tariqa.</span></p>",
+        "latitude": 31.05,
+        "longitude": -7.0979
+    }
+]
